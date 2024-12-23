@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ServiceCard from "./components/ServiceCard";
+import AboutMe from "./components/AboutMe";
 import { Unbounded, Roboto } from "next/font/google";
 
 const robotoSans = Roboto({
@@ -21,9 +22,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div className="bg-zinc-950 py-8 mt-8">
-        <h1 className="text-white text-7xl font-black px-8 mb-8 text-center md:text-start" style={{ fontFamily: 'var(--font-unbounded)' }} >Service</h1>
+        <h1 className="text-white text-5xl md:text-7xl font-black px-8 mb-8 text-center md:text-start" style={{ fontFamily: 'var(--font-unbounded)' }} >Service</h1>
         <ServiceCard />
       </div>
+      <AboutMe />
     </>
   );
 }
