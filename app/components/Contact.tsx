@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="bg-text text-12xl text-yellow-500 font-black absolute flex justify-center items-center text-center inset-x-0 bottom z-0 pointer-events-none" style={{ fontFamily: "var(--font-unbounded)" }}>
           Contact
         </div> */}
-      <div className="relative z-1 flex flex-col md:flex-row md:justify-between items-center bg-zinc-950 md:space-x-8 mt-8 px-8 py-8 space-y-8 md:space-y-0">
+      <div className="flex flex-col md:flex-row md:justify-between items-center bg-zinc-950 md:space-x-8 mt-8 px-4 md:px-8 py-8 space-y-8 md:space-y-0">
         <div className="w-full md:w-1/2 space-y-4">
           <h1 className="text-white text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
             Contact
