@@ -1,8 +1,73 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { MdEmail, MdCall, MdLocationPin } from "react-icons/md";
 import Button from "./ButtonSecondary";
 
 const Contact = () => {
+  // const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  // const [status, setStatus] = useState('');
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
+
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setStatus('Mengirim...');
+  
+  //   try {
+  //     const response = await fetch('/api/send-message', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(formData),
+  //     });
+  
+  //     const result = await response.json(); // Mendapatkan hasil dari response.json()
+  
+  //     if (response.status === 200) { // Pastikan status HTTP 200 OK
+  //       setStatus('Email berhasil dikirim!');
+  //     } else {
+  //       setStatus(`Gagal: ${result.message}`);
+  //     }
+  //   } catch (error) {
+  //     setStatus('Terjadi kesalahan saat mengirim email.');
+  //   }
+  // };
+
+  // const handleButtonClick = async () => {
+  //   setStatus('Mengirim...');
+  //   try {
+  //     const response = await fetch('/api/send-message', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     const result = await response.json();
+  //     if (response.ok) {
+  //       setStatus('Email berhasil dikirim!');
+  //     } else {
+  //       setStatus(`Gagal: ${result.message}`);
+  //     }
+  //   } catch (error) {
+  //     setStatus('Terjadi kesalahan saat mengirim email.');
+  //   }
+  // };
+  const [result, setResult] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const sendEmail = () =>{
+    fetch('api/emails', {
+      method: 'POST', 
+    })
+      .then(response => response.json())
+      .then(data => setResult(data))
+      .catch(error => setResult(error))
+      .finally(() => setLoading(false))
+  
+  }
+
   return (
     <>
       {/* <div className="relat">
@@ -38,14 +103,14 @@ const Contact = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2">
-          <form action="" className="space-y-6">
-            <input type="name" name="name" id="name" placeholder="Your Name" className="w-full rounded-full h-8 p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
-            <input type="email" name="email" id="email" placeholder="Your Email Address" className="w-full rounded-full h-8 p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
-            <textarea name="message" id="message" rows={6} placeholder="Write your message" className="w-full rounded-3xl p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
+          {/* <form onSubmit={handleSubmit} className="space-y-6">
+            <input type="name" name="name"  value={formData.name} onChange={handleChange} placeholder="Your Name" className="w-full rounded-full h-8 p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
+            <input type="email" name="email"  value={formData.email} onChange={handleChange} placeholder="Your Email Address" className="w-full rounded-full h-8 p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
+            <textarea name="message"  value={formData.message} onChange={handleChange} rows={6} placeholder="Write your message" className="w-full rounded-3xl p-8 focus:border-yellow-500 md:focus:border-yellow-500" />
             <div className="justify-self-end md:justify-self-start">
-              <Button>Send Message</Button>
+              <Button onClick={handleButtonClick}>Send Message</Button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
       {/* </div> */}
