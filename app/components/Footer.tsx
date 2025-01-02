@@ -19,16 +19,16 @@ const Footer = () => {
           </div>
           <p className="text-white text-xl">Morem ipsum dolor sit amet, consectetur adipiscing elit. . Nunc vulputate libero et velit interdum, ac aliquet odio mattis</p>
           <div className="flex felx-row space-x-4">
-            <Link href="https://www.linkedin.com/in/abi-rahmawan/" target="_blank" className="text-4xl p-4 bg-yellow-500 rounded-full">
+            <Link href="https://www.linkedin.com/in/abi-rahmawan/" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
               <FaLinkedinIn className="shake" />
             </Link>
-            <Link href="https://github.com/abirwan8" target="_blank" className="text-4xl p-4 bg-yellow-500 rounded-full">
+            <Link href="https://github.com/abirwan8" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
               <FaGithubAlt className="shake" />
             </Link>
-            <Link href="https://behance.net/abirahmawan" target="_blank" className="text-4xl p-4 bg-yellow-500 rounded-full">
+            <Link href="https://behance.net/abirahmawan" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
               <FaBehance className="shake" />
             </Link>
-            <Link href="https://www.upwork.com/freelancers/~016197b353320247a4" target="_blank" className="text-4xl p-4 bg-yellow-500 rounded-full">
+            <Link href="https://www.upwork.com/freelancers/~016197b353320247a4" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
               <FaUpwork className="shake" />
             </Link>
           </div>
@@ -39,21 +39,21 @@ const Footer = () => {
             Contact
           </h4>
           <div className="flex flex-row items-center space-x-4">
-            <div className="p-3 text-4xl bg-yellow-500 rounded-full">
+            <div className="text-2xl p-3 bg-yellow-500 rounded-full">
               <MdEmail className="shake" />
             </div>
             <span className="text-xl text-white">abi.rahmawan01@gmail.com</span>
           </div>
           <hr />
           <div className="flex flex-row items-center space-x-4">
-            <div className="p-3 text-4xl bg-yellow-500 rounded-full">
+            <div className="text-2xl p-3 bg-yellow-500 rounded-full">
               <MdCall className="shake" />
             </div>
             <span className="text-xl text-white">(+62) 81 3358 5246 5</span>
           </div>
           <hr />
           <div className="flex flex-row items-center space-x-4">
-            <div className="p-3 text-4xl bg-yellow-500 rounded-full">
+            <div className="text-2xl p-3 bg-yellow-500 rounded-full">
               <MdLocationPin className="shake" />
             </div>
             <span className="text-xl text-white">Madiun, East Java, Indonesia. 63157</span>

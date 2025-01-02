@@ -4,12 +4,11 @@ import ServiceCard from "./components/ServiceCard";
 import AboutMe from "./components/AboutMe";
 import Accordion from "./components/Accordion";
 import AccordionCard from "./components/AccordionCard";
-import Project from "./components/Project";
+import ProjectTabs from "./components/ProjectTabs";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import { Unbounded, Roboto } from "next/font/google";
-import { IoSchool } from "react-icons/io5";
 
 const robotoSans = Roboto({
   variable: "--font-roboto",
@@ -27,9 +26,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <div className="bg-zinc-950 py-8 mt-8">
-        <h1 className="text-white text-4xl md:text-7xl font-black px-8 mb-8 text-center md:text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
+      <div className="mt-24">
+        <Hero />
+      </div>
+      <div className="bg-zinc-950 py-8 px-4 md:px-8 mt-8">
+        <h1 className="text-white text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
           Service
         </h1>
         <ServiceCard />
@@ -46,15 +47,26 @@ export default function Home() {
         </div>
       </div>
 
-      <Project />
+      <ProjectTabs />
 
       <Contact />
-      <div className="mt-8 px-8">
-        <h1 className="text-5xl md:text-7xl font-black mb-8 text-center md:text-start" style={{ fontFamily: "var(--font-unbounded)" }}>FAQ</h1>
+      <div className="mt-8 px-4 md:px-8">
+        <h1 className="text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
+          FAQ
+        </h1>
         <div className="space-y-4">
-          <Faq question="Are you available for freelance work?" answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos." />
-          <Faq question="May i download your CV/Resume for information?" answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos." />
-          <Faq question="How do i navigate through your portofolio project?" answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos." />
+          <Faq
+            question="Are you available for freelance work?"
+            answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+          />
+          <Faq
+            question="May i download your CV/Resume for information?"
+            answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+          />
+          <Faq
+            question="How do i navigate through your portofolio project?"
+            answer="Sorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+          />
         </div>
       </div>
       <div className="bg-zinc-950">
