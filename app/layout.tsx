@@ -1,6 +1,10 @@
+"use client";
 import type { Metadata } from "next";
 import { Unbounded, Roboto } from "next/font/google";
+import SplashScreen from "./components/SplashScreen";
+import { usePathname } from "next/navigation";
 import "./globals.css";
+import { useEffect, useState } from "react";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -14,17 +18,25 @@ const unbounded = Unbounded({
   weight: ['400', '700']
 });
 
-export const metadata: Metadata = {
-  title: "Abi Rahmawan"
-};
+// export const metadata: Metadata = {
+//   title: "Abi Rahmawan"
+// };
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) return
+  }, [isLoading]);
+
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/logo.png" />
       </head>
@@ -32,7 +44,13 @@ export default function RootLayout({
         style={{ fontFamily: 'var(--font-roboto)' }}
         className={`${robotoSans.variable} ${unbounded.variable} antialiased`}
       >
-        {children}
+          {isLoading && isHome ? (
+            <SplashScreen finishLoading={() => setIsLoading(false)} />
+          ) : (
+            <>
+              {children}
+            </>
+          )}
       </body>
     </html>
   );
