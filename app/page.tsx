@@ -26,31 +26,38 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="mt-24">
+
+      <section id="home" className="mt-12 md:mt-24">
         <Hero />
-      </div>
-      <div className="bg-zinc-950 py-8 px-4 md:px-8 mt-8">
-        <h1 className="text-white text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
-          Service
-        </h1>
+      </section>
+
+      <section id="service" className="bg-zinc-950 py-8 px-4 md:px-8 mt-12 md:mt-24">
         <ServiceCard />
-      </div>
-      <AboutMe />
-      <div className="w-full px-4 md:px-8">
-        <div className="grid grid-col-1 md:grid-cols-2 grid-row-2 md:grid-rows-1 gap-6 mt-8">
-          <AccordionCard title="Education">
-            <Accordion item="Universitas Sebelas Maret" year="2021-2024" content="D3 Teknik Informatika | GPA: 3.87/4.00" />
-          </AccordionCard>
-          <AccordionCard title="Work Experience">
-            <Accordion item="PT. Amanin Internasional" year="2023" content="Senior High Vocational School" />
-          </AccordionCard>
+      </section>
+
+      <section id="about" className="mt-12 md:mt-24">
+        <AboutMe />
+        <div className="w-full px-4 md:px-8">
+          <div className="grid grid-col-1 md:grid-cols-2 grid-row-2 md:grid-rows-1 gap-6 mt-8">
+            <AccordionCard title="Education">
+              <Accordion item="Universitas Sebelas Maret" year="2021-2024" content="D3 Teknik Informatika | GPA: 3.87/4.00" />
+            </AccordionCard>
+            <AccordionCard title="Work Experience">
+              <Accordion item="PT. Amanin Internasional" year="2023" content="Senior High Vocational School" />
+            </AccordionCard>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <ProjectTabs />
+      <section id="project" className="mt-12 md:mt-24">
+        <ProjectTabs />
+      </section>
 
-      <Contact />
-      <div className="mt-8 px-4 md:px-8">
+      <section id="contact" className="mt-12 md:mt-24">
+        <Contact />
+      </section>
+
+      <div className="mt-12 md:mt-24 px-4 md:px-8">
         <h1 className="text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }}>
           FAQ
         </h1>
@@ -69,7 +76,8 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bg-zinc-950">
+
+      <div className="bg-zinc-950 mt-12 md:mt-24">
         <Footer />
       </div>
     </>
