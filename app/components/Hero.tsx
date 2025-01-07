@@ -1,29 +1,71 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import ButtonPrimary from "./ButtonPrimary";
-import ButtonSecondary from "./ButtonSecondary";
-import heroImage from '../assets/images/hero.png';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Button from "./Button";
+import Link from "next/link";
+import { FaUpwork, FaLinkedinIn, FaGithubAlt, FaBehance } from "react-icons/fa6";
+import { GoArrowDown } from "react-icons/go";
+import heroImage from "../assets/images/new-hero.png";
+
+import "../assets/css/style.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/files/cv.pdf"; // Pastikan file berada di folder public/files
+    link.download = "CV_Abi Rahmawan.pdf"; // Nama file saat diunduh
+    link.click();
+  };
   return (
     <>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center space-x-0 md:space-x-6 space-y-6 md:space-y-0 px-8 py-4">
-            <div className="text-center md:text-start space-y-3 md:space-y-6 mt-8 md:mt-0">
-                <h1 style={{ fontFamily: 'var(--font-unbounded)' }} className='text-4xl md:text-7xl font-black'>Abi</h1>
-                <h1 style={{ fontFamily: 'var(--font-unbounded)' }} className='text-4xl md:text-7xl font-black'>Rahmawan</h1>
-                <p className='text-xl md:text-2xl font-bold'>Front End Developer and UI/UX Designer</p>
-                <p className='text-xl'>Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-                <div className='flex justify-center md:justify-start space-x-4'>   
-                    <ButtonSecondary>Hire Me</ButtonSecondary>
-                    <ButtonPrimary>Download CV</ButtonPrimary>
-                </div>
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center space-x-0 lg:space-x-10 space-y-6 lg:space-y-0 px-4 md:px-8">
+        <div className="w-full lg:w-1/2 text-start space-y-2 lg:space-y-4 mt-8 lg:mt-0">
+          <h1 style={{ fontFamily: "var(--font-unbounded)" }} className="text-4xl md:text-7xl font-black" data-aos="fade-right">
+            Abi
+          </h1>
+          <h1 style={{ fontFamily: "var(--font-unbounded)" }} className="text-4xl md:text-7xl font-black" data-aos="fade-right">
+            Rahmawan
+          </h1>
+          <h4 className="text-xl lg:text-2xl font-bold" data-aos="fade-right">Web Developer and UI/UX Designer</h4>
+          <p className="text-xl text-justify" data-aos="fade-right">Hi, I'm Abi – a UI Designer and Web Developer. I'd be happy to help build your business's website. Let's create something great together.</p>
+          <div className="flex flex-col md:flex-row space-x-1 md:space-x-2 space-y-4 md:space-y-0" data-aos="fade-right">
+            <div className="flex space-x-4 md:space-x-2">
+              <Link href="https://www.linkedin.com/in/abi-rahmawan/" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
+                <FaLinkedinIn className="shake" />
+              </Link>
+              <Link href="https://github.com/abirwan8" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
+                <FaGithubAlt className="shake" />
+              </Link>
+              <Link href="https://behance.net/abirahmawan" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
+                <FaBehance className="shake" />
+              </Link>
+              <Link href="https://www.upwork.com/freelancers/~016197b353320247a4" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
+                <FaUpwork className="shake" />
+              </Link>
             </div>
-            <div className="image">
-                <Image src={heroImage} height={640} alt='hero'></Image>
+            <div>
+              <Link href="#" onClick={handleDownload}>
+                <Button title="Download CV" icon={<GoArrowDown className="shake text-zinc-950" />} color="bg-zinc-950 text-white" colorIcon="bg-yellow-500"></Button>
+              </Link>
             </div>
+          </div>
         </div>
+        <div className="w-full lg:w-1/2 image" data-aos="fade-left">
+          <Image src={heroImage} alt="hero" className="h-auto w-full max-h-[500px] object-contain"></Image>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Hero;

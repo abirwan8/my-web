@@ -14,3 +14,11 @@
     --foreground: #ededed;
   }
 }
+
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-family: 'Unbounded' !important;
+}
