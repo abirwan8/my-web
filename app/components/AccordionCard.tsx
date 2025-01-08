@@ -7,7 +7,6 @@ interface AccordionCardProps {
   children: React.ReactNode;
 }
 
-
 const AccordionCard: React.FC<AccordionCardProps> = ({ title, children }) => {
     return (
     <div className="bg-zinc-950 rounded-2xl py-1">

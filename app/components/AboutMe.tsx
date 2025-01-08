@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import MyPic from "../assets/images/me.png";
+import MyPic from "../assets/images/aboutme.jpg";
 import { CgFigma } from "react-icons/cg";
 import { RiJavascriptFill, RiNextjsFill, RiReactjsFill, RiTailwindCssFill, RiBootstrapFill, RiHtml5Fill, RiPhpFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoCss3 } from "react-icons/bi";
@@ -31,20 +31,15 @@ const AboutMe = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-col lg:flex-row lg:justify-between lg:space-x-8 items-center px-4 md:px-8 py-8 mt-8">
-        <div className="w-full lg:w-1/2" data-aos="fade-up">
-          <Image src={MyPic} className="rounded-2xl" alt="self"></Image>
-        </div>
-        <div className="space-y-2 justify-center lg:space-y-4 mt-8 lg:mt-0  w-full lg:w-1/2">
+        <div className="text-justify lg:text-center space-y-2 lg:space-y-4 px-4 md:px-8 mt-8">
           <h1 className="text-5xl md:text-7xl font-black" style={{ fontFamily: "var(--font-unbounded)" }} data-aos="fade-down-left">
             About Me
           </h1>
           <p className="text-2xl font-bold" data-aos="fade-up">
             Who is Abi Rahmawan?
           </p>
-          <p className="text-xl text-justify" data-aos="fade-up">
-            Hi, I'm a Web Developer and UI Designer who loves creating websites that look great and work well.I create user-friendly and responsive websites that work seamlessly across various devices. <br /> <br /> I'm always looking for
-            new challenges and opportunities to improve my skills. If you're looking for a dedicated Web Developer or UI Designer, please feel free to contact me. I would be happy to discuss how I can help you with your project.
+          <p className="text-xl" data-aos="fade-up">
+            Hi, I'm a Web Developer and UI Designer who loves creating websites that look great and work well. I create user-friendly and responsive websites that work seamlessly across various devices. I'm always looking for new challenges and opportunities to improve my skills. If you're looking for a dedicated Web Developer or UI Designer, please feel free to contact me. I would be happy to discuss how I can help you with your project.
           </p>
           <p className="text-2xl font-bold" data-aos="fade-up">
             Tech Stack
@@ -71,7 +66,6 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
