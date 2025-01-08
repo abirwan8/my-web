@@ -36,7 +36,7 @@ export default function RootLayout({
   }, [isLoading]);
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
         <link rel="icon" href="/logo.png" />
       </head>
