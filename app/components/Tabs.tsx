@@ -18,7 +18,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
       {/* Tabs Header */}
       <div className="flex space-x-2">
         {tabs.map((tab) => (
-          <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-4 py-2 font-medium transition-colors ${activeTab === tab.id ? "bg-yellow-500 rounded-full" : "border-2 border-yellow-500 text-zinc-950 rounded-full"}`}>
+          <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-4 py-2 font-medium transition-colors ${activeTab === tab.id ? "bg-yellow-500 rounded-full" : "border-2 border-yellow-500 text-zinc-950 rounded-full"}`} data-aos="zoom-in-up">
             {tab.label}
           </button>
         ))}
