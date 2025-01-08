@@ -44,6 +44,7 @@ export default function Home() {
     });
   }, []);
   return (
+    <>
     <div style={{ fontFamily: "var(--font-roboto)" }}>
       <Navbar links={links} />
 
@@ -109,5 +110,6 @@ export default function Home() {
         <Footer />
       </div>
     </div>
+    </>
   );
 }

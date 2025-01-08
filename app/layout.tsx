@@ -18,10 +18,6 @@ const unbounded = Unbounded({
   weight: ['400', '700']
 });
 
-// export const metadata: Metadata = {
-//   title: "Abi Rahmawan"
-// };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
+        <title>Abi Rahmawan</title>
         <link rel="icon" href="/logo.png" />
       </head>
       <body
