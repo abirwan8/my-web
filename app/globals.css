@@ -22,3 +22,7 @@ html{
 h1{
   font-family: 'Unbounded' !important;
 }
+
+body {
+  overflow-x: hidden;
+}
