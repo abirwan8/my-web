@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import MyPic from "../assets/images/aboutme.jpg";
 import { CgFigma } from "react-icons/cg";
 import { RiJavascriptFill, RiNextjsFill, RiReactjsFill, RiTailwindCssFill, RiBootstrapFill, RiHtml5Fill, RiPhpFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoCss3 } from "react-icons/bi";
@@ -39,7 +37,7 @@ const AboutMe = () => {
             Who is Abi Rahmawan?
           </p>
           <p className="text-xl" data-aos="fade-up">
-            Hi, I'm a Web Developer and UI Designer who loves creating websites that look great and work well. I create user-friendly and responsive websites that work seamlessly across various devices. I'm always looking for new challenges and opportunities to improve my skills. If you're looking for a dedicated Web Developer or UI Designer, please feel free to contact me. I would be happy to discuss how I can help you with your project.
+            Hi, I&apos;m a Web Developer and UI Designer who loves creating websites that look great and work well. I create user-friendly and responsive websites that work seamlessly across various devices. I&apos;m always looking for new challenges and opportunities to improve my skills. If you&apos;re looking for a dedicated Web Developer or UI Designer, please feel free to contact me. I would be happy to discuss how I can help you with your project.
           </p>
           <p className="text-2xl font-bold" data-aos="fade-up">
             Tech Stack

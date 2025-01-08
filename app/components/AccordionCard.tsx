@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { IoSchool } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
 

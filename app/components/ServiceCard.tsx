@@ -4,7 +4,6 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import webDesign from "../assets/images/web-design.png";
-import appDesign from "../assets/images/mobile-design.png";
 import frontEnd from "../assets/images/front-end.png";
 import "../assets/css/style.css";
 

@@ -11,20 +11,7 @@ import ProjectTabs from "./components/ProjectTabs";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
-import { Unbounded, Roboto } from "next/font/google";
 import { useEffect } from "react";
-
-const robotoSans = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function Home() {
   const links = [

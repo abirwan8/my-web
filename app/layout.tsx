@@ -1,5 +1,4 @@
 "use client";
-import type { Metadata } from "next";
 import { Unbounded, Roboto } from "next/font/google";
 import SplashScreen from "./components/SplashScreen";
 import { usePathname } from "next/navigation";

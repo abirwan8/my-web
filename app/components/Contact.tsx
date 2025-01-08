@@ -27,7 +27,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -72,8 +71,8 @@ const Contact = () => {
           <h1 className="text-white text-5xl md:text-7xl font-black mb-8 text-start" style={{ fontFamily: "var(--font-unbounded)" }} data-aos="fade-down-right">
             Contact
           </h1>
-          <p className="text-white text-2xl font-bold" data-aos="fade-up">Let's Connect and Collaborate</p>
-          <p className="text-white text-xl" data-aos="fade-up">Whether you have a project in mind, a question to ask, feel free to reach out. I'm excited to collaborate and bring your ideas to life.</p>
+          <p className="text-white text-2xl font-bold" data-aos="fade-up">Let&apos;s Connect and Collaborate</p>
+          <p className="text-white text-xl" data-aos="fade-up">Whether you have a project in mind, a question to ask, feel free to reach out. I&apos;m excited to collaborate and bring your ideas to life.</p>
           <div className="flex flex-row items-center space-x-4" data-aos="fade-up">
             <div className="text-2xl p-3 bg-yellow-500 rounded-full">
               <MdEmail className="shake" />

@@ -1,28 +1,32 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import anime from 'animejs';
-import '../assets/css/style.css';
+import React, { useCallback, useEffect, useState } from "react";
+import anime from "animejs";
+import "../assets/css/style.css";
 
-const SplashScreen = ({ finishLoading }: any) => {
+const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
     const [isMounted, setIsMounted] = useState(false);
-    const animate = () =>{
+    
+    const animate = useCallback(() => {
         const loader = anime.timeline({
             complete: () => finishLoading(),
-        })
+        });
 
         loader.add({
-            target: '.splash-container',
+            target: ".splash-container",
             delay: 0,
             duration: 3000,
-        })
-
-    }
+        });
+    }, [finishLoading]);
 
     useEffect(() => {   
         const timeout = setTimeout(() => setIsMounted(true), 1000);
         animate()
         return () => clearTimeout(timeout);
-    }, []);
+    }, [animate]);
+
+    if (!isMounted) {
+        return null;
+    }
 
   return (
     <div className="splash-container">

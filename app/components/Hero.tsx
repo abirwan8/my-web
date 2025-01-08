@@ -37,7 +37,7 @@ const Hero = () => {
             Rahmawan
           </h1>
           <h4 className="text-xl lg:text-2xl font-bold" data-aos="fade-right">Web Developer and UI/UX Designer</h4>
-          <p className="text-xl text-justify" data-aos="fade-right">Hi, I'm Abi – a UI Designer and Web Developer. I'd be happy to help build your business's website. Let's create something great together.</p>
+          <p className="text-xl text-justify" data-aos="fade-right">Hi, I&apos;m Abi – a UI Designer and Web Developer. I&apos;d be happy to help build your business&apos;s website. Let&apos;s create something great together.</p>
           <div className="flex flex-col md:flex-row space-x-1 md:space-x-2 space-y-4 md:space-y-0" data-aos="fade-right">
             <div className="flex space-x-4 md:space-x-2">
               <Link href="https://www.linkedin.com/in/abi-rahmawan/" target="_blank" className="text-2xl p-3 bg-yellow-500 rounded-full">
