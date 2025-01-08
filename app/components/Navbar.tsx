@@ -60,7 +60,9 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
         {/* Toggle Button */}
         <div className="flex space-x-4 lg:hidden">
-          <Button title="Hire me" icon={<GoArrowUpRight className="shake text-zinc-950" />} color="bg-zinc-950 text-white" colorIcon="bg-yellow-500"></Button>
+          <Link href={mailtoLink} target="_blank">
+            <Button title="Hire me" icon={<GoArrowUpRight className="shake text-zinc-950" />} color="bg-zinc-950 text-white" colorIcon="bg-yellow-500"></Button>
+          </Link>
           <button className="text-zinc-950" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <IoClose className="text-2xl" /> : <HiMenuAlt3 className="text-2xl" />}
           </button>
