@@ -12,8 +12,6 @@ interface NavbarProps {
   links: { id: string; label: string; href: string }[];
 }
 
-const EMAIL = "abi.rahmawan01@gmail.com";
-
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +47,8 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
     };
   }, []);
 
+
+  const EMAIL = "abi.rahmawan01@gmail.com";
   const mailtoLink = `mailto:${EMAIL}`;
 
   return (
