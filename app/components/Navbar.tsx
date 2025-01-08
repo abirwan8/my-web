@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   return (
     <>
-      <div className={`navbar w-full fixed bg-white flex justify-between items-center top-0 py-3 px-8 z-10 ${isScrolled ? "shadow-md" : "shadow-none"}`}>
+      <div className={`navbar w-full fixed bg-white flex justify-between items-center top-0 py-3 px-4 md:px-8 z-10 ${isScrolled ? "shadow-md" : "shadow-none"}`}>
         <div className="logo">
           <Image src="/logo.png" width={40} height={40} alt="logo" />
         </div>
