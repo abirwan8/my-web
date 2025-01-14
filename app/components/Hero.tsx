@@ -22,7 +22,7 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/files/cv.pdf"; // Pastikan file berada di folder public/files
+    link.href = "/files/CV_AbiRahmawan.pdf";
     link.download = "CV_Abi Rahmawan.pdf"; // Nama file saat diunduh
     link.click();
   };
