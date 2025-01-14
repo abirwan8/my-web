@@ -22,7 +22,7 @@ const Hero = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/files/CV_AbiRahmawan.pdf";
+    link.href = "/files/CV_Abi Rahmawan.pdf";
     link.download = "CV_Abi Rahmawan.pdf"; // Nama file saat diunduh
     link.click();
   };
